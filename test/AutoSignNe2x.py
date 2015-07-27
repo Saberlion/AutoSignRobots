@@ -4,10 +4,9 @@ from lxml import etree
 import requests
 
 __author__ = 'arthur'
-email='******'
-psw = '*****'
+from setting import *
 
-def autosign_ne2x():
+def autosign_ne2x(email,psw):
     header_info = {
         'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1581.2 Safari/537.36',
         'Host': 'ne2x.com',
@@ -43,4 +42,4 @@ def autosign_ne2x():
 
     print 'ne2x sign '+ r._content
 
-autosign_ne2x()
+autosign_ne2x(email, psw)
